@@ -3,6 +3,7 @@ import {
   StyledUserAvatar,
   StyledUserName,
   StyledUserDscr,
+  UserWrapper,
 } from "./UserInfo.styled";
 
 export function UserInfo() {
@@ -10,15 +11,15 @@ export function UserInfo() {
     <FlexWrapper>
       <StyledUserAvatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvF7hRmDgLI-4cPuyOw1Gb0rrNX5wxwLIbAA&usqp=CAU"></StyledUserAvatar>
 
-      <div>
-        <StyledUserName>Name </StyledUserName>
+      <UserWrapper>
+        <StyledUserName>Name</StyledUserName>
         <StyledUserDscr>
-          Date of birthday: 
-          City: 
-          Education: 
-          Web site:
+         <p>Date of birthday: "propsData"</p> 
+         <p>City: "propsData"</p>
+         <p>Education: "propsData"</p>
+         <p>Web site: "propsData"</p>
         </StyledUserDscr>
-      </div>
+      </UserWrapper>
     </FlexWrapper>
   );
 }

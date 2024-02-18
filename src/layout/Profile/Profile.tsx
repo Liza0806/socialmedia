@@ -1,16 +1,16 @@
 import { MyPosts } from "../../components/posts/myPosts/MyPosts";
 import { UserInfo } from "../../components/userInfo/UserInfo";
-import { MainContentStyled, StyledImage } from "./MainContent.styled";
+import { StyledImage } from "./Profile.styled";
 
-export function MainContent() {
+export function Profile() {
   return (
-    <MainContentStyled>
-      <StyledImage width="100vw" height="10em"
+    <div>
+      <StyledImage height="10em"
         src="https://www.smet.it/wp-content/uploads/2018/10/sea-smet.jpg"
         alt="sea"
       ></StyledImage>
      <UserInfo/>
      <MyPosts/>
-    </MainContentStyled>
+    </div>
   );
 }

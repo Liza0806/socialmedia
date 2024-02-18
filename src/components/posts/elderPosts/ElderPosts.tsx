@@ -1,4 +1,5 @@
-import { OnePostItem } from "../onePostItem/onePostItem";
+import { OnePostItem } from "../onePostItem/OnePostItem";
+
 
 export function ElderPosts() {
   return (

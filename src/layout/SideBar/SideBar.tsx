@@ -1,30 +1,33 @@
+import { NavLink } from "react-router-dom";
 import {
-  SideBarItemStyled,
-  SideBarLinkStyled,
-  SideBarListStyled,
-  SideBarStyled,
+  SB_ItemStyled,
+  SB_ListStyled,
+  SB_NavStyled,
 } from "./SideBar.styled";
-
-export function SideBar() {
+ 
+type NavLinkPropsType = {
+  isActive?: boolean
+}
+export function SideBar(props: NavLinkPropsType) {
   return (
-    <SideBarStyled>
-      <SideBarListStyled>
-        <SideBarItemStyled>
-          <SideBarLinkStyled href="#">Profile</SideBarLinkStyled>
-        </SideBarItemStyled>
-        <SideBarItemStyled>
-          <SideBarLinkStyled href="#">Messages</SideBarLinkStyled>
-        </SideBarItemStyled>
-        <SideBarItemStyled>
-          <SideBarLinkStyled href="#">News</SideBarLinkStyled>
-        </SideBarItemStyled>
-        <SideBarItemStyled>
-          <SideBarLinkStyled href="#">Music</SideBarLinkStyled>
-        </SideBarItemStyled>
-        <SideBarItemStyled>
-          <SideBarLinkStyled href="#">Settings</SideBarLinkStyled>
-        </SideBarItemStyled>
-      </SideBarListStyled>
-    </SideBarStyled>
+    <SB_NavStyled>
+      <SB_ListStyled>
+        <SB_ItemStyled>
+          <NavLink to="/profile">Profile</NavLink>
+        </SB_ItemStyled>
+        <SB_ItemStyled>
+          <NavLink to="/dialogs">Messages</NavLink>
+        </SB_ItemStyled>
+        <SB_ItemStyled>
+          <NavLink to="/news">News</NavLink>
+        </SB_ItemStyled>
+        <SB_ItemStyled>
+          <NavLink to="/music">Music</NavLink>
+        </SB_ItemStyled>
+        <SB_ItemStyled>
+          <NavLink to="/settings">Settings</NavLink>
+        </SB_ItemStyled>
+      </SB_ListStyled>
+    </SB_NavStyled>
   );
 }

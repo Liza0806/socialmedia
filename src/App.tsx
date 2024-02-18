@@ -1,20 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Header } from './layout/Header/Header';
-import { SideBar } from './layout/SideBar/SideBar';
-import { MainContent } from './layout/MainContent/MainContent';
-import { Footer } from './layout/Footer/Footer';
-import styled from 'styled-components';
+import React from "react";
+import "./App.css";
+import { Header } from "./layout/Header/Header";
+import { SideBar } from "./layout/SideBar/SideBar";
+import { Profile } from "./layout/Profile/Profile";
+import styled from "styled-components";
+import { Dialogs } from "./layout/dialogs/Dialogs";
+import { Route, Routes } from "react-router-dom";
+import { Music } from "./layout/music/Music";
+import { News } from "./layout/news/News";
+import { Settings } from "./layout/settings/Settings";
 
 function App() {
   return (
-   <AppWrapper>
-    <Header/>
-    <SideBar/>
-    <MainContent/>
-    <Footer/>
-   </AppWrapper>
+    <AppWrapper>
+      <Header />
+      <SideBar />
+      <MainContentWrapper>
+        <Routes>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/dialogs" element={<Dialogs />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </MainContentWrapper>
+    </AppWrapper>
   );
 }
 
@@ -25,8 +35,11 @@ export const AppWrapper = styled.div`
   grid-template-rows: 60px 1fr 60px;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
-  grid-template-areas: 
+  grid-template-areas:
     "Header Header"
     "SideBar MainContent"
     "Footer Footer";
+`;
+export const MainContentWrapper = styled.div`
+  grid-area: MainContent;
 `;
