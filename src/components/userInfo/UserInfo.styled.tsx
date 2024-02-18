@@ -5,10 +5,10 @@ export const StyledUserAvatar = styled.img`
     height: 250px;
     object-fit: cover;
     border-radius: 20px;
-    margin: 20px;
+    margin-right: 20px;
 `
 export const StyledUserName = styled.p`
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     color: #282828;
     padding-bottom: 10px;
@@ -32,7 +32,6 @@ export const StyledUserDscr = styled.div`
 export const UserWrapper = styled.div`
     border-radius: 20px;
     background-color: #dbdadc; 
-    margin: 20px;
     padding: 20px;
     width: 100%;
   

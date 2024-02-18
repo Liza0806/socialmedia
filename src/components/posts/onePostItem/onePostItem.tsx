@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { FlexWrapper } from "../../flexWrapper/FlexWrapper";
 import { AvatarInPost, NameInPost, TextInPost } from "./OnePostItem.styled";
 

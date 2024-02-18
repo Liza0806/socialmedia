@@ -8,7 +8,7 @@ import {
 
 export function UserInfo() {
   return (
-    <FlexWrapper>
+    <FlexWrapper margin="0 0 20px 0">
       <StyledUserAvatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvF7hRmDgLI-4cPuyOw1Gb0rrNX5wxwLIbAA&usqp=CAU"></StyledUserAvatar>
 
       <UserWrapper>

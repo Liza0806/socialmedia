@@ -34,7 +34,6 @@ export const AppWrapper = styled.div`
   display: grid;
   grid-template-rows: 60px 1fr 60px;
   grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
   grid-template-areas:
     "Header Header"
     "SideBar MainContent"
@@ -42,4 +41,5 @@ export const AppWrapper = styled.div`
 `;
 export const MainContentWrapper = styled.div`
   grid-area: MainContent;
+
 `;

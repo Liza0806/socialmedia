@@ -11,5 +11,7 @@ height?: string
 export const StyledImage = styled.img<StyledImagePropsType>`
 width:${props=> props?.width || "100%"};
 height: ${props=> props?.height || "100%"};
-
   `
+export const UserInfoWrapper = styled.div`
+padding: 20px;
+`
