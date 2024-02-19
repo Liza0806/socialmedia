@@ -1,7 +1,8 @@
+import { OldPostType } from "../../data";
 import { FlexWrapper } from "../../flexWrapper/FlexWrapper";
 import { AvatarInPost, NameInPost, TextInPost } from "./OnePostItem.styled";
 
-export function OnePostItem() {
+export function OnePostItem(props: OldPostType) {
   return (
     <FlexWrapper margin="10px">
       <AvatarInPost
@@ -10,9 +11,7 @@ export function OnePostItem() {
       />
       <TextInPost>
         <NameInPost>User Name: </NameInPost>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-        malesuada purus ac nisl eleifend, nec lacinia ligula fermentum. Integer
-        et eleifend enim.
+       <li key={props.id}>{props.text}</li>
       </TextInPost>
     </FlexWrapper>
   );

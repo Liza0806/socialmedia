@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-type DialogItemProps = {
-    name: string;
+export type DialogItemProps = {
+    name: string
+    id: number
 }
 export function DialogItem(props: DialogItemProps) {
+    let path = "/dialogs/"+props.id
     return (
-        <li><NavLink to={"/dialogs/"+props.name}>{props.name}</NavLink></li>
+        <li><NavLink to={path} >{props.name}</NavLink></li>
     );
 }

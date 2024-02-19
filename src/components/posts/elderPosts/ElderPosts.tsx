@@ -1,15 +1,29 @@
+import { OldPostType, OldPostsType,  } from "../../data";
 import { SubTitle } from "../../tytles/Titles";
 import { OnePostItem } from "../onePostItem/OnePostItem";
 
-
-export function ElderPosts() {
-  return (
+export type OldPostsTypeListProps = {
+  Posts: OldPostsType;
+}
+export function ElderPosts({ Posts }: OldPostsTypeListProps) {
+ 
+  if(Posts){ return (
     <div>
       <SubTitle text="Old post"/>
-    <OnePostItem/>
-    <OnePostItem/>
-    <OnePostItem/>
+     
+    <ul>
+      {Posts.map((post: OldPostType) => {
+       return ( 
+       <OnePostItem id={post.id} text={post.text}/>
+       )
+      })
+
+      }
+    </ul>
     </div>
-  );
+  )
+} return (
+  <p>no post. Type smth...</p>
+)
 }
  
