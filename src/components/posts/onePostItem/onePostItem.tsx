@@ -11,7 +11,7 @@ export function OnePostItem(props: OldPostType) {
       />
       <TextInPost>
         <NameInPost>User Name: </NameInPost>
-       <li key={props.id}>{props.text}</li>
+        <li key={props.id}>{props.text}</li>
       </TextInPost>
     </FlexWrapper>
   );

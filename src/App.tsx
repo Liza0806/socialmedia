@@ -41,5 +41,4 @@ export const AppWrapper = styled.div`
 `;
 export const MainContentWrapper = styled.div`
   grid-area: MainContent;
-
 `;

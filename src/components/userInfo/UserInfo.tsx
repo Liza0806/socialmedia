@@ -14,10 +14,10 @@ export function UserInfo() {
       <UserWrapper>
         <StyledUserName>Name</StyledUserName>
         <StyledUserDscr>
-         <p>Date of birthday: "propsData"</p> 
-         <p>City: "propsData"</p>
-         <p>Education: "propsData"</p>
-         <p>Web site: "propsData"</p>
+          <p>Date of birthday: "propsData"</p>
+          <p>City: "propsData"</p>
+          <p>Education: "propsData"</p>
+          <p>Web site: "propsData"</p>
         </StyledUserDscr>
       </UserWrapper>
     </FlexWrapper>

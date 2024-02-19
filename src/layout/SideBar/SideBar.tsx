@@ -1,13 +1,9 @@
 import { NavLink } from "react-router-dom";
-import {
-  SB_ItemStyled,
-  SB_ListStyled,
-  SB_NavStyled,
-} from "./SideBar.styled";
- 
+import { SB_ItemStyled, SB_ListStyled, SB_NavStyled } from "./SideBar.styled";
+
 type NavLinkPropsType = {
-  isActive?: boolean
-}
+  isActive?: boolean;
+};
 export function SideBar(props: NavLinkPropsType) {
   return (
     <SB_NavStyled>

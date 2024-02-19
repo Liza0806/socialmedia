@@ -86,37 +86,35 @@ export const Users: UsersType = [
     ],
   },
 ];
-export type OldPostsType = Array<OldPostType>
+export type OldPostsType = Array<OldPostType>;
 
 export type OldPostType = {
-    id: number
-    text: string
-}
-export const OldPost: OldPostsType = [   
-      {
-        id: 1,
-        text: "Quisque id hendrerit arcu, non condimentum leo. Maecenas id urna magna. Fusce quis tincidunt purus, in blandit arcu. Etiam vel dapibus nisi.",
-      },
-      {
-        id: 2,
-        text: " In pretium dignissim tellus ac suscipit. In hac habitasse platea dictumst. Etiam ac turpis a ipsum sodales ultricies id nec nunc. Maecenas vel consequat libero.",
-      },
-      {
-        id: 3,
-        text: "Pellentesque mollis justo a ante commodo ullamcorper. Pellentesque posuere nulla eget varius interdum. Praesent lacinia faucibus erat, vel efficitur augue vehicula in. Nulla ultrices consectetur libero non ornare. Donec at ornare neque. Aenean nec augue pretium, cursus arcu a, pulvinar elit. Integer convallis cursus feugiat",
-      },
-      {
-        id: 4,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum urna ac vulputate euismod. Etiam cursus ex metus, id semper justo ullamcorper nec. Pellentesque nulla nunc, feugiat nec bibendum lacinia, auctor sed lacus. Praesent lacinia imperdiet nisi, sit amet porta metus ultrices a. ",
-      },
-      {
-        id: 5,
-        text: "Pellentesque nulla nunc, feugiat nec bibendum lacinia, auctor sed lacus. Praesent lacinia imperdiet nisi, sit amet porta metus ultrices a. Nunc nec nulla aliquet, semper erat eu, pulvinar mi. Integer pharetra libero at fermentum molestie. Praesent at tempor erat, placerat tempor nulla.",
-      },
-      {
-        id: 6,
-        text: "Duis condimentum urna ac vulputate euismod. Etiam cursus ex metus, id semper justo ullamcorper nec. Pellentesque nulla nunc, feugiat nec bibendum lacinia, auctor sed lacus. Praesent lacinia imperdiet nisi, sit amet porta metus ultrices a. ",
-      },
-    ]
- 
-  
+  id: number;
+  text: string;
+};
+export const OldPost: OldPostsType = [
+  {
+    id: 1,
+    text: "Quisque id hendrerit arcu, non condimentum leo. Maecenas id urna magna. Fusce quis tincidunt purus, in blandit arcu. Etiam vel dapibus nisi.",
+  },
+  {
+    id: 2,
+    text: " In pretium dignissim tellus ac suscipit. In hac habitasse platea dictumst. Etiam ac turpis a ipsum sodales ultricies id nec nunc. Maecenas vel consequat libero.",
+  },
+  {
+    id: 3,
+    text: "Pellentesque mollis justo a ante commodo ullamcorper. Pellentesque posuere nulla eget varius interdum. Praesent lacinia faucibus erat, vel efficitur augue vehicula in. Nulla ultrices consectetur libero non ornare. Donec at ornare neque. Aenean nec augue pretium, cursus arcu a, pulvinar elit. Integer convallis cursus feugiat",
+  },
+  {
+    id: 4,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum urna ac vulputate euismod. Etiam cursus ex metus, id semper justo ullamcorper nec. Pellentesque nulla nunc, feugiat nec bibendum lacinia, auctor sed lacus. Praesent lacinia imperdiet nisi, sit amet porta metus ultrices a. ",
+  },
+  {
+    id: 5,
+    text: "Pellentesque nulla nunc, feugiat nec bibendum lacinia, auctor sed lacus. Praesent lacinia imperdiet nisi, sit amet porta metus ultrices a. Nunc nec nulla aliquet, semper erat eu, pulvinar mi. Integer pharetra libero at fermentum molestie. Praesent at tempor erat, placerat tempor nulla.",
+  },
+  {
+    id: 6,
+    text: "Duis condimentum urna ac vulputate euismod. Etiam cursus ex metus, id semper justo ullamcorper nec. Pellentesque nulla nunc, feugiat nec bibendum lacinia, auctor sed lacus. Praesent lacinia imperdiet nisi, sit amet porta metus ultrices a. ",
+  },
+];

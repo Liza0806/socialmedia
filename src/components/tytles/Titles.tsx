@@ -1,11 +1,9 @@
-import { SubTitleStyled } from "./Titles.styled"
+import { SubTitleStyled } from "./Titles.styled";
 
 type SubTitlePropsType = {
-    text: string
-}
+  text: string;
+};
 
-export const SubTitle = (props:SubTitlePropsType) => {
-    return(
-        <SubTitleStyled>{props.text}</SubTitleStyled>
-    )
-}
+export const SubTitle = (props: SubTitlePropsType) => {
+  return <SubTitleStyled>{props.text}</SubTitleStyled>;
+};
