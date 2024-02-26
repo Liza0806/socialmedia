@@ -5,7 +5,18 @@ import { OnePostItem } from "../onePostItem/OnePostItem";
 export type OldPostsTypeListProps = {
   Posts: OldPostsType;
 };
+export function newFunction (props: any) {
+    return (
+      <div>
+        {props}
+      </div>
+    )
+}
+
 export function ElderPosts({ Posts }: OldPostsTypeListProps) {
+ console.log(newFunction, newFunction.prototype)
+ console.log(Object.keys(newFunction));
+console.log(Object.getOwnPropertyNames(newFunction));
   if (Posts) {
     return (
       <div>

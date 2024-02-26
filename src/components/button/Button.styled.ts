@@ -9,6 +9,7 @@ export type StyledBtnPropsType = {
   color?: string;
   margin?: string;
   height?: string;
+  onClick: any
 };
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
