@@ -1,5 +1,5 @@
 import { MessageType, MessagesType, UserType, Users, UsersType } from "../data";
-import { DialogsListProps } from "../dialogs/DialogsList";
+// import { DialogsListProps } from "../dialogs/DialogsList";
 import { MessageItem } from "./Message";
 type MessageListType = {
   userId: number;
