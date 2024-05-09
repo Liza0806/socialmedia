@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
  import rootReducer from './reducers/reducers';
-import { subscribe } from 'diagnostics_channel';
  type addPostPropsType = {
     postMessage: Array<postMessagePropsType>
 }

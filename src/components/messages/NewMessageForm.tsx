@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { nanoid } from "nanoid";
 import { addMessage } from "../../redux/actions/messagesActions";
@@ -15,10 +14,10 @@ let typePost =(e: any) => {
 e.preventDefault();
 setNewMessageText(e.target.value)
 }
-const createNewPostItem = (newPostText: string) => {
+const createNewMessageItem = (newMessageText: string) => {
   const message = {
     id: nanoid(),
-    message: newPostText,
+    message: newMessageText,
     likeCount: 0,
   }
   dispatch(addMessage(message)); // Отправляем новый пост в хранилище с помощью dispatch
@@ -29,7 +28,7 @@ const createNewPostItem = (newPostText: string) => {
   return (
     <form onSubmit={(e) => { 
       e.preventDefault(); 
-      createNewPostItem(newMessageText); 
+      createNewMessageItem(newMessageText); 
     }}>
       <InputNewPost placeholder="type to your friend" value={newMessageText} onChange={(e)=>{typePost(e)}}/> 
       <Button /> 
