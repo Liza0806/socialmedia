@@ -1,4 +1,3 @@
-
 import { OldPost } from "../../data";
 import { ElderPosts } from "../elderPosts/ElderPosts";
 import { NewPostForm } from "../newPostForm/NewPostForm";
@@ -6,15 +5,9 @@ import { NewPostForm } from "../newPostForm/NewPostForm";
 import { useDispatch } from "react-redux";
 
 export function MyPosts() {
-  
-  //console.log(userSlice, "-userSlice")
-  //console.log(fetchUserData, "-fetchUserData")
-  //console.log(fetchUserData(), "-fetchUserData()")
   const dispatch = useDispatch();
 
-  const fetchUserDataAction = () => {
-
-  };
+  const fetchUserDataAction = () => {};
 
   return (
     <div>
