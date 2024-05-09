@@ -14,9 +14,9 @@ export function newFunction (props: any) {
 }
 
 export function ElderPosts({ Posts }: OldPostsTypeListProps) {
- console.log(newFunction, newFunction.prototype)
- console.log(Object.keys(newFunction));
-console.log(Object.getOwnPropertyNames(newFunction));
+ // console.log(newFunction, newFunction.prototype)
+// console.log(Object.keys(newFunction));
+// console.log(Object.getOwnPropertyNames(newFunction));
   if (Posts) {
     return (
       <div>
