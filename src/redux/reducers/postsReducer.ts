@@ -1,9 +1,3 @@
-// type addPostPropsType = {
-//     postMessage: Array<postMessagePropsType>
-// }
-// type postMessagePropsType = {
-//     message: string
-// }
 type newPostPropsType = {
   id: number;
   message: string;
