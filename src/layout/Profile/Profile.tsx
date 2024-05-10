@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { MyPosts } from "../../components/posts/myPosts/MyPosts";
 import { UserInfo } from "../../components/userInfo/UserInfo";
 import { StyledImage, UserInfoWrapper } from "./Profile.styled";

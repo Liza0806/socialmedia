@@ -14,33 +14,61 @@ export const Smth = () => {
       } catch (error) {
         console.log(error);
       }
-    
-    }
-   fetchData(); }, []);
+    };
+    fetchData();
+  }, []);
 
+  function bitMarch(n: number) {
+    let y:any = [];
+    let c:any = [];
+    for (let i = 1; i < 9; i++) {
+      if (i <= n) {
+        y.unshift(1);
+      } else {
+        y.unshift(0);
+      }
+    }
+    c = [[...y]];
+    
+    let repeate = () => {
+      if (y[0] === 1){
+        return c
+      }
+      y.shift();
+      y.push(0);
+      c = [...c, [...y]];
+    
+     while (y[0] !== 1) {repeate() } 
+      return c;
+    }
+    repeate()
+    //c = [...c, [...y]];
+    console.log(c, 'c')
+    return c;
+  }
+  bitMarch(1);
   return (
     <div>
       <label htmlFor="breed-select">Choose a pet:</label>
-      {breeds.length !== 0 && 
+      {breeds.length !== 0 && (
         <select name="pets" id="breed-select">
           {breeds.map((breed: any) => (
             <option value={breed.id}>{breed.name}</option>
           ))}
         </select>
-      }
-    <div>
-<div onClick={()=> setIsHidden(!isHidden)}>klc</div>
-<div hidden={isHidden}>
-    {breeds.length !== 0 && (
-    <ul>
-      {breeds.map((breed: any) => (
-        <li key={breed.id}>{breed.name}</li>
-      ))}
-    </ul>
-  )}
-</div>
- 
-    </div>
+      )}
+      <div>
+        <div onClick={() => setIsHidden(!isHidden)}>klc</div>
+        <div hidden={isHidden}>
+          {breeds.length !== 0 && (
+            <ul>
+              {breeds.map((breed: any) => (
+                <li key={breed.id}>{breed.name}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

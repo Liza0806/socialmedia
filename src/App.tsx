@@ -25,7 +25,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </MainContentWrapper>
-      <Smth/>
+       <Smth/> 
     </AppWrapper>
   );
 }
