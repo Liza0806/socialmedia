@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import { Music } from "./layout/music/Music";
 import { News } from "./layout/news/News";
 import { Settings } from "./layout/settings/Settings";
+import { Smth } from "./smth/smth";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </MainContentWrapper>
+      <Smth/>
     </AppWrapper>
   );
 }
