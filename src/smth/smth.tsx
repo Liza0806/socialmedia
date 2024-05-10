@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export const Smth = () => {
   const [breeds, setBreeds] = useState([]);
-
+  const [isHidden, setIsHidden] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -21,13 +21,26 @@ export const Smth = () => {
   return (
     <div>
       <label htmlFor="breed-select">Choose a pet:</label>
-      {breeds.length !== 0 && (
+      {breeds.length !== 0 && 
         <select name="pets" id="breed-select">
           {breeds.map((breed: any) => (
             <option value={breed.id}>{breed.name}</option>
           ))}
         </select>
-      )}
+      }
+    <div>
+<div onClick={()=> setIsHidden(!isHidden)}>klc</div>
+<div hidden={isHidden}>
+    {breeds.length !== 0 && (
+    <ul>
+      {breeds.map((breed: any) => (
+        <li key={breed.id}>{breed.name}</li>
+      ))}
+    </ul>
+  )}
+</div>
+ 
+    </div>
     </div>
   );
 };
