@@ -15,24 +15,16 @@
   
   export const usersReducer = (state = initialState, action: actionType) => {
     switch (action.type) {
-       case "FOlLLOW":
+       case "FOlLLOW_TOGGLER":
          console.log(action, "action in usersReducer follow");
        return  {...state, users: state.users.map(user=> {
             if (user.id === action.userId){
-return {...user, followed: true}
+return {...user, followed: !user.followed}
             }
             return user
          })}
     
          
-         case "UNFOlLLOW":
-         console.log(action, "action in usersReducer unfollow");
-       return{...state, users: state.users.map(user=> {
-            if (user.id === action.userId){
-return {...user, followed: false}
-            }
-            return user
-         })}
      case "SET_USERS": {
 return {...state, users: [...state.users, ...action.users]}
      }
@@ -44,16 +36,11 @@ return {...state, users: [...state.users, ...action.users]}
   
 export const followAC = (userId: any) => {
 return ({
-    type: "FOLLOW",
+    type: "FOlLLOW_TOGGLER",
     id: userId
 })
 }
-export const unfollowAC = (userId: any) => {
-    return ({
-        type: "FOLLOW",
-        id: userId
-    })
-    }
+
     export const setUsers = (users: any) => {
         return ({
             type: "SET_USERS",
