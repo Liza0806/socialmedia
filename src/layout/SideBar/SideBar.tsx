@@ -23,6 +23,9 @@ export function SideBar(props: NavLinkPropsType) {
         <SB_ItemStyled>
           <NavLink to="/settings">Settings</NavLink>
         </SB_ItemStyled>
+        <SB_ItemStyled>
+          <NavLink to="/users">users</NavLink>
+        </SB_ItemStyled>
       </SB_ListStyled>
     </SB_NavStyled>
   );

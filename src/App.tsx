@@ -10,6 +10,7 @@ import { Music } from "./layout/music/Music";
 import { News } from "./layout/news/News";
 import { Settings } from "./layout/settings/Settings";
 import { Smth } from "./smth/smth";
+import { Users } from "./components/Users/Users";
 
 function App() {
   return (
@@ -23,9 +24,10 @@ function App() {
           <Route path="/music" element={<Music />} />
           <Route path="/news" element={<News />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/users" element={<Users />} />
         </Routes>
       </MainContentWrapper>
-       <Smth/> 
+      {/* <Smth/>  */}
     </AppWrapper>
   );
 }
