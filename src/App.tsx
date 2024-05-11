@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import { Music } from "./layout/music/Music";
 import { News } from "./layout/news/News";
 import { Settings } from "./layout/settings/Settings";
-// import { Smth } from "./smth/smth";
+ import { Smth } from "./smth/smth";
 import { Users } from "./components/Users/Users";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <Route path="/users" element={<Users />} />
         </Routes>
       </MainContentWrapper>
-      {/* <Smth/>  */}
+       <Smth/>  
     </AppWrapper>
   );
 }

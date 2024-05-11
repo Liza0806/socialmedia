@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -27,4 +28,24 @@
 .App-link {
   color: #61dafb;
 }
+/* part only for my joy and happiness */
+.modalLayout {
+    position: fixed;
+    z-index: 9;
+    background-color: rgba(2, 2, 2, 0.5);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    >div{
+ background-color: aliceblue;
+ width: 50vw;
+ height: 50vh;
+ top: 50%;
+ left: 50%;
+ transform: translateX(50%) translateY(50%);
+    }
+}
+
 
