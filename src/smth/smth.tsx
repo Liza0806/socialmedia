@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 
-// export const Smth = () => {
+ export const Smth = () => {
   // const [breeds, setBreeds] = useState([]);
   // const [isHidden, setIsHidden] = useState(true);
   // useEffect(() => {
@@ -45,9 +45,13 @@
   //   return c;
   // }
   // bitMarch(1);
-  // return (
-  //   <div>
-  //     <label htmlFor="breed-select">Choose a pet:</label>
+   return (
+     <div>
+     
+    </div>)
+
+ };
+ // <label htmlFor="breed-select">Choose a pet:</label>
   //     {breeds.length !== 0 && (
   //       <select name="pets" id="breed-select">
   //         {breeds.map((breed: any) => (
@@ -67,6 +71,3 @@
   //         )}
   //       </div>
   //     </div>
-  //   </div>
-  // );
-// };
