@@ -1,9 +1,8 @@
 export const Smth = () => {
   const changeColorF = (e: any) => {
-    console.dir(e, "e");
     e.currentTarget.style.cssText = e.target.style.cssText;
   };
-
+  
   return (
     <div>
       <div>
@@ -27,9 +26,10 @@ export const Smth = () => {
   );
 };
 
-// const divColorChildren = e.target.style.backgroundColor
-// const divsColorParent = e.currentTurget.style.backgroundColor
-//  divsColorParent.style.backgroundColor = divsColorChildren
+
+
+
+
 // modal window
 
 // const [isHidden, setIsHidden] = useState(true);
@@ -62,6 +62,7 @@ export const Smth = () => {
 //       </div>
 //     }</div>
 //   );
+
 //cats fetch
 
 // useEffect(() => {
@@ -132,3 +133,16 @@ export const Smth = () => {
 //   return c;
 // }
 // bitMarch(1);
+
+// function divisors(integer) {
+//   let w = []
+//   for (let i = 2; i<integer; i++){  
+//     if(integer % i === 0 ){
+//       w.push(i)
+//     }
+//   }
+//   if(w.length === 0){
+//     w=`${integer} is prime`
+//   }
+//   return w
+// };
