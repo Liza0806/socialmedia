@@ -26,6 +26,9 @@ export function SideBar(props: NavLinkPropsType) {
         <SB_ItemStyled>
           <NavLink to="/users">users</NavLink>
         </SB_ItemStyled>
+        <SB_ItemStyled>
+          <NavLink to="/smth">smth</NavLink>
+        </SB_ItemStyled>
       </SB_ListStyled>
     </SB_NavStyled>
   );

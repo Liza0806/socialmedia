@@ -11,6 +11,21 @@ import { useEffect, useState } from "react";
     //     console.error('Error fetching data:', error);
     //   }}
 
+    // const fetchData = async () => {
+    //   try {
+    //     const xhr = new XMLHttpRequest();
+    //     xhr.open('GET', 'https://social-network.samuraijs.com/api/1.0/users', true);
+    //     xhr.onreadystatechange = function() {
+    //       if (xhr.readyState === 4 && xhr.status === 200) {
+    //         const data = JSON.parse(xhr.responseText);
+    //         setUsers(data.items);
+    //       }
+    //     };
+    //     xhr.send();
+    //   } catch (error) {
+    //     console.error('Error fetching data:', error);
+    //   }
+    // };
 export const Users = (props: any) => {
   const [users, setUsers] = useState([]);
   const fetchData = async () => {

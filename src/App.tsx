@@ -25,9 +25,10 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/smth" element={<Smth/>}/>
         </Routes>
       </MainContentWrapper>
-       <Smth/>  
+     
     </AppWrapper>
   );
 }

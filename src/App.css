@@ -48,4 +48,37 @@
     }
 }
 
+.changeColor {
+  background-color: aliceblue;
+  width: 600px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 30px;
+  border: 2px solid black;
+}
+.changeColor :first-child div {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+}
 
+.changeColor :nth-child(2) div {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+.changeColor :last-child div {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border: 1px solid black;
+}
