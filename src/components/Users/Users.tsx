@@ -1,9 +1,22 @@
-import { useSelector } from "react-redux";
-
+import {  useEffect, useState } from "react";
 export const Users = (props: any) => {
-  const users = useSelector((state: any) => state.users.users);
-  console.log(users, "users");
-  
+ const [users, setUsers] = useState([])
+ 
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://social-network.samuraijs.com/api/1.0/users');
+      const data = await response.json();
+      console.log(data.items, 'data'); 
+      setUsers(data.items);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  fetchData();
+}, []);
+
   return (
     <div>
       {users && users.map((user:any) => (
@@ -14,7 +27,7 @@ export const Users = (props: any) => {
           </div>
           <div>
             <div>
-              <div>{user.fullname}</div>
+              <div>{user.name}</div>
               <div>{user.status}</div>
             </div>
             <div>{user.country}</div>
