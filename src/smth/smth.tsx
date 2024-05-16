@@ -1,34 +1,64 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 export const Smth = () => {
-  const changeColorF = (e: any) => {
-    e.currentTarget.style.cssText = e.target.style.cssText;
-  };
-  
+
+const [photos, setPhotos]=useState(false)
+const [fetching, setFetching]=useState(false)
+const [currentPageNumber, setCurrentPageNumber]=useState(0)
+const [totalCount, setTotalCount]=useState(false)
+
+const scrollHandler = (e: any) => {
+  console.log(e, 'e')
+}
+
+  useEffect(()=> {
+document.addEventListener('scroll', scrollHandler)
+  },[])
+  useEffect(()=> {
+if(fetching){
+  axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=10&_page=${currentPageNumber}`)
+ 
+}
+  },[fetching])
   return (
     <div>
-      <div>
-        <ul
-          className="changeColor"
-          onClick={changeColorF}
-          style={{ backgroundColor: "white" }}
-        >
-          <li>
-            <div style={{ backgroundColor: "red" }}>1</div>
-          </li>
-          <li>
-            <div style={{ backgroundColor: "yellow" }}>2</div>
-          </li>
-          <li>
-            <div style={{ backgroundColor: "green" }}>3</div>
-          </li>
-        </ul>
-      </div>
+   
     </div>
   );
 };
 
 
 
+// colorpicker
 
+// export const Smth = () => {
+//   const changeColorF = (e: any) => {
+//     e.currentTarget.style.cssText = e.target.style.cssText;
+//   };
+  
+//   return (
+//     <div>
+//       <div>
+//         <ul
+//           className="changeColor"
+//           onClick={changeColorF}
+//           style={{ backgroundColor: "white" }}
+//         >
+//           <li>
+//             <div style={{ backgroundColor: "red" }}>1</div>
+//           </li>
+//           <li>
+//             <div style={{ backgroundColor: "yellow" }}>2</div>
+//           </li>
+//           <li>
+//             <div style={{ backgroundColor: "green" }}>3</div>
+//           </li>
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
 
 // modal window
 
