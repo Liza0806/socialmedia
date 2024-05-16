@@ -1,30 +1,59 @@
 import axios from "axios";
+import { error } from "console";
 import { useEffect, useState } from "react";
+type PhotoType = {
+  albumId: number;
+  id: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
+}
 
 export const Smth = () => {
 
-const [photos, setPhotos]=useState(false)
-const [fetching, setFetching]=useState(false)
-const [currentPageNumber, setCurrentPageNumber]=useState(0)
-const [totalCount, setTotalCount]=useState(false)
+const [photos, setPhotos]=useState<Array<PhotoType>>([])
+const [fetching, setFetching]=useState<boolean>(true)
+const [currentPageNumber, setCurrentPageNumber]=useState<number>(0)
+const [totalCount, setTotalCount]=useState<number>(1)
 
-const scrollHandler = (e: any) => {
-  console.log(e, 'e')
+const scrollHandler = (e:any) => {
+  console.log('scroll')
+// e.target.documentElement.scrollHeight
+//  console.log(e.target.documentElement.scrollTop)
+ // console.log(window.innerHeight)
+  if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100){
+setFetching(true)
+  }
 }
 
   useEffect(()=> {
 document.addEventListener('scroll', scrollHandler)
-return document.removeEventListener('scroll', scrollHandler)
+return function () {
+  document.removeEventListener('scroll', scrollHandler)
+
+} 
   },[])
+
   useEffect(()=> {
-if(fetching){
+ if(fetching){
   axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=10&_page=${currentPageNumber}`)
-  .then(res=> setPhotos(res.data))
-}
+  .then(res=> {
+    setPhotos([...photos, ...res.data])
+    setCurrentPageNumber(prevState=>prevState +1)  
+  })
+  .catch(error=>(console.log('error')))
+  .finally(()=> setFetching(false))
+ }
+
   },[fetching])
   return (
     <div>
-   
+   {photos.map(photo=>(
+    <div key={photo.id}>
+      <img src={photo.url} alt={photo.title} width={150} height={150}></img>
+      <p>{photo.title}</p>
+    </div>
+   ))}
     </div>
   );
 };
