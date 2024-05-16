@@ -14,11 +14,12 @@ const scrollHandler = (e: any) => {
 
   useEffect(()=> {
 document.addEventListener('scroll', scrollHandler)
+return document.removeEventListener('scroll', scrollHandler)
   },[])
   useEffect(()=> {
 if(fetching){
   axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=10&_page=${currentPageNumber}`)
- 
+  .then(res=> setPhotos(res.data))
 }
   },[fetching])
   return (
