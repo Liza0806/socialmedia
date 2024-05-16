@@ -14,14 +14,10 @@ export const Smth = () => {
 const [photos, setPhotos]=useState<Array<PhotoType>>([])
 const [fetching, setFetching]=useState<boolean>(true)
 const [currentPageNumber, setCurrentPageNumber]=useState<number>(0)
-const [totalCount, setTotalCount]=useState<number>(1)
+const [totalCount, setTotalCount]=useState<number>(0)
 
 const scrollHandler = (e:any) => {
-  console.log('scroll')
-// e.target.documentElement.scrollHeight
-//  console.log(e.target.documentElement.scrollTop)
- // console.log(window.innerHeight)
-  if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100){
+  if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && photos.length < totalCount){
 setFetching(true)
   }
 }
@@ -30,7 +26,6 @@ setFetching(true)
 document.addEventListener('scroll', scrollHandler)
 return function () {
   document.removeEventListener('scroll', scrollHandler)
-
 } 
   },[])
 
@@ -40,6 +35,7 @@ return function () {
   .then(res=> {
     setPhotos([...photos, ...res.data])
     setCurrentPageNumber(prevState=>prevState +1)  
+    setTotalCount(res.headers['x-total-count'])
   })
   .catch(error=>(console.log('error')))
   .finally(()=> setFetching(false))
